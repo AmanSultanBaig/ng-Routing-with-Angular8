@@ -2,10 +2,14 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { DepartmentsComponent } from './components/departments/departments.component';
 import { DepartmentDetailsComponent } from './components/department-details/department-details.component';
+import { NotFoundComponent } from './components/not-found/not-found.component';
 
 const routes: Routes = [
-  {path:'departments',component:DepartmentsComponent},
-  {path:'department-details',component:DepartmentDetailsComponent}
+  { path: '', redirectTo: 'departments', pathMatch: 'full' },
+  { path: 'departments', component: DepartmentsComponent },
+  { path: 'department-details', component: DepartmentDetailsComponent },
+  // wild card routing 
+  { path: '**', component: NotFoundComponent },
 ];
 
 @NgModule({
@@ -17,5 +21,6 @@ export class AppRoutingModule { }
 
 export const MyComponents = [
   DepartmentsComponent,
-  DepartmentDetailsComponent
+  DepartmentDetailsComponent,
+  NotFoundComponent
 ]

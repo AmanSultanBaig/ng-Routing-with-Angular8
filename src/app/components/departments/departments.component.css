@@ -1,0 +1,19 @@
+ol {
+    text-decoration: none;
+}
+
+li {
+    text-align: center;
+    border: solid 1px #ccc;
+    width: 10%;
+    padding: 2px;   
+    transition: ease-in-out 0.5s;
+}
+
+li:hover {
+    transition: ease-in-out 0.5s;
+    box-shadow: #666 4px 4px 4px 4px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: 500
+}
