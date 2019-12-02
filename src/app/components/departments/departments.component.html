@@ -1,7 +1,7 @@
 <div class="container">
     <p>departments works!</p>
     <ul class="items">
-        <li (click)="onSelect(departments)" *ngFor="let cb of courses">
+        <li *ngFor="let cb of courses">
           <b>{{cb.id}}</b>  {{cb.course}}
         </li>
     </ul>
